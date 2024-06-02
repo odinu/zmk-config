@@ -53,16 +53,16 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// | CAPS  |     |     |  ^   |      |      |                   |   )  |   ]   |   }   |   -  |   =   |   \   |
+// | CAPS  |     |     |  ^   | RST  | BLDR |                   |   )  |   ]   |   }   |   -  |   =   |   \   |
 // |       |     |  <- |  v   |  ->  |      |                   |  INS | HOME  |  PGUP |      |       |       |
 // |       |     |     |      |      |      |        |  |       |  DEL |  END  |  PGDN | PSCR | SLCK  | PAUSE |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp F12   &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
-&kp CLCK  &trans    &trans    &kp UP      &trans    &trans                    &kp RPAR  &kp RBKT &kp RBRC  &kp MINUS &kp EQUAL &kp BSLH
-&trans    &trans    &kp LEFT  &kp DOWN    &kp RIGHT &trans                    &kp INS   &kp HOME &kp PG_UP &trans    &trans    &trans
-&trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans &kp DEL   &kp END  &kp PG_DN &kp PSCRN &kp SLCK  &kp PAUSE_BREAK
-                    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans    &trans
+&kp F12   &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                    &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
+&kp CLCK  &trans    &trans    &kp UP      &sys_reset &bootloader               &kp RPAR  &kp RBKT &kp RBRC  &kp MINUS &kp EQUAL &kp BSLH
+&trans    &trans    &kp LEFT  &kp DOWN    &kp RIGHT  &trans                    &kp INS   &kp HOME &kp PG_UP &trans    &trans    &trans
+&trans    &trans    &trans    &trans      &trans     &trans    &trans   &trans &kp DEL   &kp END  &kp PG_DN &kp PSCRN &kp SLCK  &kp PAUSE_BREAK
+                    &trans    &trans      &trans     &trans    &trans   &trans &trans    &trans   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -71,16 +71,16 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |BTCLR| BT1   | BT2   |  BT3  |  BT4  |  BT5  |                |      |      |       |      |       |       |
-// |     | INS   | PSCR  |   {   |   [   |  (    |                | PGUP |      |   ^   |      |       |       |
-// |     |RGB_HUD|RGB_BRD|RGB_BRI|       | CAPS  |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+// |     | INS   | PSCR  |   {   |   [   |  (    |                | BLDR | RST  |   ^   |      |       |       |
+// |     |RGB_HUD|RGB_BRD|RGB_BRI|       | CAPS  |                |      |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |     |RGB_HUI|RGB_SAD|RGB_SAI|RGB_EFF|RGB_TOG|      |  |      |      |      |       |      |       |       |
 //               |       |       |       |       |      |  |      |      |      |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                        &trans    &trans    &trans   &trans    &trans  &trans
-&trans     &kp INS         &kp PSCRN       &kp LBRC        &kp LBKT         &kp LPAR                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_BRI &trans           &kp CLCK                            &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF  &rgb_ug RGB_TOG   &trans  &trans    &trans    &trans    &trans   &trans    &trans
-                           &trans          &trans          &trans           &trans            &trans  &trans    &trans    &trans    &trans   &trans
+&bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                        &trans      &trans     &trans   &trans    &trans  &trans
+&trans     &kp INS         &kp PSCRN       &kp LBRC        &kp LBKT         &kp LPAR                            &bootloader &sys_reset &kp UP   &trans    &kp N0  &trans
+&trans     &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_BRI &trans           &kp CLCK                            &trans      &kp LEFT   &kp DOWN &kp RIGHT &kp DEL &kp BSPC
+&trans     &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF  &rgb_ug RGB_TOG   &trans  &trans    &trans      &trans     &trans   &trans    &trans
+                           &trans          &trans          &trans           &trans            &trans  &trans    &trans      &trans     &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
