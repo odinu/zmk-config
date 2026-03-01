@@ -72,7 +72,7 @@
 //               |       |       |       |       |      |  |      |      |      |       |      |
             bindings = <
 &trans   &trans          &trans          &trans          &trans            &trans                              &trans      &trans     &trans    &trans    &trans     &trans
-&trans   &trans          &trans          &kp LBRC        &kp LBKT          &kp LPAR                            &trans      &trans     &kp UP    &trans    &kp N0     &trans
+&trans   &trans          &trans          &kp LBRC        &kp LBKT          &kp LPAR                            &trans      &trans     &kp UP    &trans    &trans     &trans
 &trans   &trans          &trans          &trans          &trans            &kp CLCK                            &trans      &kp LEFT   &kp DOWN  &kp RIGHT &trans     &trans
 &trans   &trans          &trans          &trans          &trans            &trans            &trans  &trans    &trans      &trans     &trans    &trans    &trans     &bt BT_CLR
                          &trans          &trans          &trans            &trans            &trans  &trans    &trans      &trans     &trans    &trans
